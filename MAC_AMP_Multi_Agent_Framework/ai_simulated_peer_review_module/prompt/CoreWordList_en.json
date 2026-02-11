@@ -1,0 +1,86 @@
+{
+    "Eff": {
+      "b_a": 0.00,
+      "cores": [
+        {"id":"mic_band",                "name_cn":"Original MIC predicted value",               "states":["low","medium","high"]},
+        {"id":"amp_likelihood",          "name_cn":"AMP probability (MACREL)",             "states":["low","medium","high"]},
+        {"id":"net_charge",              "name_cn":"Net charge",                         "states":["low","optimal","high"]},
+        {"id":"hydrophobicity",          "name_cn":"Hydrophobicity",                         "states":["low","balanced","high"]},
+        {"id":"amphipathicity",          "name_cn":"Amphiphilicity",                         "states":["balanced","imbalanced"]},
+        {"id":"hydrophobic_moment",      "name_cn":"Hydrophobic moment",                         "states":["in_band","off_band"]},
+        {"id":"charge_hydrophobic_ratio","name_cn":"Positive/hydrophobic ratio",                    "states":["balanced","imbalanced"]},
+        {"id":"cation_pi_motif",         "name_cn":"Cation–aromatic interaction motif",        "states":["present","absent"]}
+      ],
+      "weights": {
+        "mic_band":                 {"low": 0.50, "medium": 0.20, "high": -0.56},
+        "amp_likelihood":           {"low": -0.20, "medium": 0.10, "high":  0.20},
+        "net_charge":               {"low": -0.28, "optimal": 0.32, "high": -0.30},
+        "hydrophobicity":           {"low": -0.22, "balanced": 0.20, "high": -0.26},
+        "amphipathicity":           {"balanced": 0.28, "imbalanced": -0.26},
+        "hydrophobic_moment":       {"in_band": 0.28, "off_band": -0.26},
+        "charge_hydrophobic_ratio": {"balanced": 0.12, "imbalanced": -0.16},
+        "cation_pi_motif":          {"present": 0.10, "absent": 0.00}
+      }
+    },
+  
+    "Safe": {
+      "b_a": 0.00,
+      "cores": [
+        {"id":"toxinpred",              "name_cn":"Toxicity Prediction (ToxinPred)",      "states":["low","medium","high"]},
+        {"id":"hydrophobicity_safety",  "name_cn":"Hydrophobicity (safety perspective)",         "states":["low","balanced","high"]},
+        {"id":"over_cationic_level",    "name_cn":"Degree of over-cationization",         "states":["low","moderate","high"]},
+        {"id":"aromatic_enrichment",    "name_cn":"Aromatic enrichment",                 "states":["low","moderate","high"]},
+        {"id":"boman_index",            "name_cn":"Boman index",               "states":["low","moderate","very_high"]},
+        {"id":"rk_run_length",          "name_cn":"R/K consecutive run segment",             "states":["low","medium","high"]}
+      ],
+      "weights": {
+        "toxinpred":             {"low":  0.60, "medium":  0.00, "high": -0.80},
+        "hydrophobicity_safety": {"low":  0.10, "balanced": 0.20, "high": -0.20},
+        "over_cationic_level":   {"low":  0.20, "moderate": 0.00, "high": -0.30},
+        "aromatic_enrichment":   {"low":  0.15, "moderate": 0.00, "high": -0.20},
+        "boman_index":           {"low":  0.10, "moderate": 0.20, "very_high": -0.30},
+        "rk_run_length":         {"low":  0.15, "medium": -0.05, "high": -0.20}
+      }
+    },
+  
+    "DevStruct": {
+      "b_a": 0.00,
+      "cores": [
+        {"id":"plddt",                "name_cn":"OmegaFold pLDDT",            "states":["low","medium","high"]},
+        {"id":"instability_index",    "name_cn":"Instability index (ProtParam)",      "states":["high","medium","low"]},
+        {"id":"solubility_proxy",     "name_cn":"Solubility proxy (by GRAVY, etc.)",      "states":["poor","moderate","good"]},
+        {"id":"aliphatic_index",      "name_cn":"Aliphatic index",                 "states":["low","moderate","high"]},
+        {"id":"length_band",          "name_cn":"Length band",                     "states":["short","optimal","long"]},
+        {"id":"cysteine_complexity",  "name_cn":"Cysteine/disulfide-bridge complexity",    "states":["high","medium","low"]},
+        {"id":"aggregation_proxy",    "name_cn":"Aggregation tendency agent",               "states":["high","medium","low"]}
+      ],
+      "weights": {
+        "plddt":                 {"low": -0.45, "medium": 0.10, "high": 0.40},
+        "instability_index":     {"high": -0.35, "medium": 0.10, "low": 0.30},
+        "solubility_proxy":      {"poor": -0.35, "moderate": 0.10, "good": 0.30},
+        "aliphatic_index":       {"low": -0.10, "moderate": 0.10, "high": 0.15},
+        "length_band":           {"short": -0.20, "optimal": 0.25, "long": -0.20},
+        "cysteine_complexity":   {"high": -0.15, "medium": 0.00, "low": 0.10},
+        "aggregation_proxy":     {"high": -0.25, "medium": 0.00, "low": 0.20}
+      }
+    },
+  
+    "Orig": {
+      "b_a": 0.00,
+      "cores": [
+        {"id":"foldseek_similarity",   "name_cn":"Similarity to template (FoldSeek)",   "states":["low","medium","high"]},
+        {"id":"kmer_reuse",            "name_cn":"K-mer reuse rate",             "states":["low","medium","high"]},
+        {"id":"batch_diversity",       "name_cn":"Within-batch diversity (10 candidates)",     "states":["low","medium","high"]},
+        {"id":"low_complexity_content","name_cn":"Low-complexity content",             "states":["high","medium","low"]},
+        {"id":"template_motif_reuse",  "name_cn":"Template motif reuse",             "states":["extensive","partial","absent"]}
+      ],
+      "weights": {
+        "foldseek_similarity":    {"low": 0.40, "medium": 0.20, "high": -0.40},
+        "kmer_reuse":             {"low": 0.25, "medium": 0.10, "high": -0.30},
+        "batch_diversity":        {"low": -0.30, "medium": 0.10, "high": 0.30},
+        "low_complexity_content": {"high": -0.25, "medium": 0.00, "low": 0.10},
+        "template_motif_reuse":   {"extensive": -0.25, "partial": 0.00, "absent": 0.20}
+      }
+    }
+  }
+  

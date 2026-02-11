@@ -1,0 +1,7 @@
+**.git/**
+Generation_Module/tmp_foldseek/**
+Generation_Module/tmp_omegafold/**
+mac_amp_framework/outputs/mac_amp_framework/**
+**/__pycache__/**
+mac_amp_framework/rl_refinement_module/tmp_reward/**
+Generation_Module/model_ckpt/pytorch_model.bin

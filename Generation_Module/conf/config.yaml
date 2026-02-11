@@ -1,0 +1,18 @@
+defaults:
+  - _self_
+  - override hydra/job_logging: disabled
+  - override hydra/output:  local
+
+# PPO训练参数
+max_iterations: 3
+num_samples: 32
+max_seq_len: 50
+
+# 控制参数
+task: test_generator_taskGPT
+wandb_activate: false
+wandb_entity: ""
+wandb_project: ""
+headless: true
+capture_video: false
+force_render: false

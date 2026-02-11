@@ -1,0 +1,4 @@
+# dummy merge rules (minimal BPE)
+A C
+C D
+D E

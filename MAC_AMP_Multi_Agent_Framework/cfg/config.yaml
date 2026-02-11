@@ -1,0 +1,36 @@
+defaults:
+  - _self_
+  - env: test_generator
+  - override hydra/launcher: local
+  - override hydra/output: local
+
+hydra:
+  job:
+    chdir: True
+
+# env
+task: test_amp_generator_task
+env_name: test_amp_generator_env
+
+# LLM parameters
+model: gpt-5  # LLM model for reward design
+temperature: 1.0
+suffix: GPT
+
+# PPO训练参数
+num_samples: 32
+max_seq_len: 50
+
+# 控制参数
+skip_independent_reviewer: ""
+real_epoch: 15
+sand_box_epoch: 5
+max_length: 32
+drift_wordlist: "Null"
+ablation_mode: 0
+experiment: "baseline_api"
+log_path: my_test_tag
+real_train_stage_iteration: 3
+sandbox_iteration: 3
+reward_sample_num: 3
+batch_size: 10

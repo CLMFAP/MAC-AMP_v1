@@ -1,0 +1,119 @@
+################################################################################
+# OS / Editor
+################################################################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+################################################################################
+# Python
+################################################################################
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+pip-wheel-metadata/
+
+# Virtualenv / Conda
+.venv/
+venv/
+env/
+ENV/
+conda_env/
+*.egg-info/
+dist/
+build/
+
+################################################################################
+# Jupyter
+################################################################################
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+################################################################################
+# Logs / temp
+################################################################################
+*.log
+logs/
+tmp/
+temp/
+
+################################################################################
+# Common experiment outputs (Hydra / Lightning / etc.)
+################################################################################
+# Hydra default output dirs (very common)
+outputs/
+multirun/
+
+# PyTorch Lightning
+lightning_logs/
+
+# TensorBoard
+runs/
+
+################################################################################
+# Weights & Biases / MLflow
+################################################################################
+wandb/
+mlruns/
+mlartifacts/
+
+################################################################################
+# Data / datasets / caches (IMPORTANT: adjust to your repo layout)
+################################################################################
+# Generic data dirs
+data/
+dataset/
+datasets/
+raw_data/
+processed_data/
+
+# Caches
+.cache/
+cache/
+huggingface/
+.hf/
+transformers_cache/
+torch_cache/
+pip_cache/
+
+# RDKit / scientific caches (optional)
+*.pkl
+*.pickle
+*.joblib
+
+################################################################################
+# Model checkpoints / large binaries
+################################################################################
+# Deep learning checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Numpy / arrays (optional; keep if you do want to version small npy)
+*.npy
+*.npz
+
+# Compressed archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
