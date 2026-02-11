@@ -20,7 +20,7 @@
   <img src="mac_amp_fig3.png" width="100%" />
 </p>
 
-#### Figure 3: Overview of the Reinforcement Learning Renement module.
+#### Figure 3: Overview of the Reinforcement Learning Refinement module.
 
 ---
 
