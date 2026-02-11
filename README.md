@@ -1,6 +1,6 @@
 ### MAC-AMP: A CLOSED-LOOP MULTI-AGENT COLLABORATION SYSTEM FOR MULTI-OBJECTIVE ANTIMICROBIAL PEPTIDE DESIGN
 
-#### Details about MAC-AMP's architecture are illustrated below and further described in our [paper](https://openreview.net/forum?id=iW1zfncsbc).
+#### Details about MAC-AMP's architecture are illustrated below and further described in our ICLR 2026 [paper](https://openreview.net/forum?id=iW1zfncsbc).
 
 
 
